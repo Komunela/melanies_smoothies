@@ -2,6 +2,7 @@
 import streamlit as st
 import requests
 from snowflake.snowpark.functions import col
+import pandas as pd
 cnx = st.connection("snowflake")
 session = cnx.session()
 
