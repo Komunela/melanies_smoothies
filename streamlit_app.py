@@ -33,7 +33,7 @@ if ingredients_list:
     ingredients_string = ''
 
     for ingredient in ingredients_list:
-        ingredients_string += ingredient + ', '
+        ingredients_string += ingredient + ' '
         search_on=pd_df.loc[pd_df['FRUIT_NAME'] == ingredient, 'SEARCH_ON'].iloc[0]
         st.write('The search value for ', ingredient,' is ', search_on, '.')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + search_on)
